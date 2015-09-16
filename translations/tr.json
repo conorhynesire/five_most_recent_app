@@ -1,20 +1,20 @@
 {
   "app": {
-    "description": "Display the five most recent tickets the requester has submitted",
-    "name": "Five most recent"
+    "description": "Talep edenin gönderdiği en son beş kaydı görüntüle",
+    "name": "En son beşi"
   },
   "global": {
-    "status": "Status:",
+    "status": "Durum:",
     "error": {
-      "title": "An error occurred",
-      "message": "Please try the previous action again.",
-      "data": "Ticket data could not be read."
+      "title": "Bir hata oluştu",
+      "message": "Lütfen önceki eylemi tekrar deneyin.",
+      "data": "Kayıt verileri okunamadı."
     }
   },
-  "new": "New",
-  "hold": "On-hold",
-  "closed": "Closed",
-  "solved": "Solved",
-  "open": "Open",
-  "pending": "Pending"
+  "new": "Yeni",
+  "hold": "Askıda",
+  "closed": "Kapalı",
+  "solved": "Çözüldü",
+  "open": "Açık",
+  "pending": "Beklemede"
 }

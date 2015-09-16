@@ -1,0 +1,20 @@
+{
+  "app": {
+    "description": "Zobrazit pět posledních tiketů, které klient odeslal",
+    "name": "Pět posledních"
+  },
+  "global": {
+    "status": "Stav:",
+    "error": {
+      "title": "Došlo k chybě",
+      "message": "Zkuste prosím provést předchozí akci znovu.",
+      "data": "Nelze přečíst data tiketu."
+    }
+  },
+  "new": "Nový",
+  "hold": "Pozastavený",
+  "closed": "Uzavřený",
+  "solved": "Vyřešený",
+  "open": "Otevřený",
+  "pending": "Čekající"
+}
