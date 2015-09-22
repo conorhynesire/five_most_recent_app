@@ -1,7 +1,7 @@
 {
   "app": {
     "description": "Vis de fem mest nylig opprettede sakene som anmoderen har sendt inn",
-    "name": "De fem siste"
+    "name": "Kundens fem siste saker"
   },
   "global": {
     "status": "Status:",

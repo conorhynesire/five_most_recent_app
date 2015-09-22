@@ -1,0 +1,20 @@
+{
+  "app": {
+    "description": "Wyświetl pięć ostatnich zgłoszeń tej osoby zlecającej",
+    "name": "Pięć ostatnich"
+  },
+  "global": {
+    "status": "Status:",
+    "error": {
+      "title": "Wystąpił błąd",
+      "message": "Spróbuj ponowić poprzednią czynność.",
+      "data": "Nie można odczytać danych zgłoszenia."
+    }
+  },
+  "new": "Nowe",
+  "hold": "Wstrzymane",
+  "closed": "Zamknięto",
+  "solved": "Załatwione",
+  "open": "Przypisane",
+  "pending": "Oczekujące"
+}

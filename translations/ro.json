@@ -1,0 +1,20 @@
+{
+  "app": {
+    "description": "Afişaţi cele mai recente cinci tichete pe care le-a trimis solicitantul",
+    "name": "Cele mai recente 5 tichete"
+  },
+  "global": {
+    "status": "Stare:",
+    "error": {
+      "title": "A apărut o eroare",
+      "message": "Vă rugăm să repetaţi acţiunea anterioară.",
+      "data": "Datele tichetului nu au putut fi citite."
+    }
+  },
+  "new": "Nou",
+  "hold": "În pauză",
+  "closed": "Închis",
+  "solved": "Rezolvat",
+  "open": "Deschis",
+  "pending": "În aşteptare"
+}

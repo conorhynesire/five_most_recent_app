@@ -1,0 +1,20 @@
+{
+  "app": {
+    "description": "Näytä viisi viimeisintä tikettiä, jotka lähettäjä on lähettänyt",
+    "name": "Viisi viimeisintä"
+  },
+  "global": {
+    "status": "Tila:",
+    "error": {
+      "title": "Esiintyi virhe",
+      "message": "Yritä edellistä toimintoa uudelleen.",
+      "data": "Tiketin tietoja ei voitu lukea."
+    }
+  },
+  "new": "Uusi",
+  "hold": "Pidossa",
+  "closed": "Suljettu",
+  "solved": "Ratkaistu",
+  "open": "Avattu",
+  "pending": "Odottaa"
+}
