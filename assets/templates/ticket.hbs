@@ -5,7 +5,7 @@
       {{#each lastFive}}
         <tr>
           {{!-- <td class="tooltip" data-title="{{truncate description 200}}"></td> --}}
-          <td class="tooltip" data-title="{{truncate description 200}}"><a class="ticket-links" href="https://{{subdomain}}.zendesk.com/api/v2/channels/voice/agents/{{agent_id}}/tickets/{{id}}/display.json">{{subject}}</a></td>
+          <td class="tooltip subject" data-title="{{truncate description 200}}"><a class="ticket-links" href="https://{{subdomain}}.zendesk.com/api/v2/channels/voice/agents/{{agent_id}}/tickets/{{id}}/display.json">{{subject}}</a></td>
 
           <td class='status-cell'>
             <b class="status">

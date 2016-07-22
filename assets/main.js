@@ -84,14 +84,12 @@ function flatten(object) {
           y.subdomain = x.subdomain;
           y.agent_id = x.agent_id;
         })
-        console.log('las', lastestFive);
         $('#ticket-links').render('ticket',{
           lastFive: lastestFive
         });
   }
 
   var openSaysme = function(href){
-    console.log('open', href);
     voiceHack = {
       url: href,
       type: 'POST',
