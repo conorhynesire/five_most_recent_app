@@ -67,9 +67,34 @@ describe('TicketSidebar', () => {
       spyOn(app.view, 'switchTo');
       await sleep();
       expect(app.view.switchTo).toHaveBeenCalledWith('main', {
-        latestTickets: _.take(tickets.tickets, 2)
+        latestTickets: _.chain(tickets.tickets)
+          .sortBy('id')
+          .value()
+          .reverse()
+          .slice(0, 2)
       });
       done();
     });
   });
+
+  describe('#sortTickets', () => {
+    beforeEach(() => {
+      tickets = createTickets(3);
+      app = createSubject();
+      spyOn(app, 'init');
+    });
+
+    it('should sort the tickets by id descending', () => {
+      const randomOrderTickets = tickets.tickets.slice();
+      _.shuffle(randomOrderTickets);
+      expect(app.sortTickets(randomOrderTickets)[0]).toEqual({
+        id: 2,
+        subject: 'Ticket 2'
+      });
+    });
+
+    it('should return an empty array when input is null', () => {
+      expect(app.sortTickets()).toEqual([]);
+    });
+  })
 });

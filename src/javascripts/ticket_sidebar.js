@@ -16,9 +16,9 @@ class TicketSidebar {
         });
       }
     });
-    
+
     this.view.switchTo('loading');
-    
+
     this.init();
   }
 
@@ -28,20 +28,20 @@ class TicketSidebar {
       url: `/api/v2/users/${getData['ticket.requester.id']}/tickets/requested.json?sort_order=desc`,
       dataType: 'json'
     });
-    const sortedTickets = this.sortTickets(
-      requestData.tickets,
-      this._metadata.settings.max_tickets_to_display
-    );
+    const sortedTickets = this.sortTickets(requestData.tickets);
     this.view.switchTo('main', {
-      latestTickets: sortedTickets
+      latestTickets: _.take(
+        sortedTickets,
+        this._metadata.settings.max_tickets_to_display
+      ) 
     });
   }
 
-  sortTickets(tickets = [], maxTickets = 5) {
+  sortTickets(tickets = []) {
     return _.chain(tickets)
       .sortBy('id')
-      .take(maxTickets)
-      .value();
+      .value()
+      .reverse();
   }
 }
 
