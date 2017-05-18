@@ -1,9 +1,8 @@
 {
-  "name": "Five most recent",
+  "name": "Five Most Recent Tickets",
   "author": {
     "name": "Zendesk",
-    "email": "support@zendesk.com",
-    "url": "https://www.zendesk.com"
+    "email": "support@zendesk.com"
   },
   "defaultLocale": "en",
   "private": false,
@@ -21,6 +20,6 @@
       "default": 5
     }
   ],
-  "version": "2.0.0",
-  "frameworkVersion": "2.0"
+  "frameworkVersion": "2.0",
+  "version": "2.0.0"
 }
