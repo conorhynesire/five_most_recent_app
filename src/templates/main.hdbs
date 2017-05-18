@@ -1,1 +1,16 @@
-<p>{{t "hello" name=name}}</p>
+ <table class="table table-condensed">
+  <tbody>
+    {{#each latestTickets}}
+      <tr class="_tooltip" data-title="{{description}}">
+        <td><a href="#/tickets/{{id}}"><b>#{{id}}</b> {{subject}}</a></td>
+
+        <td class='status-cell'>
+          <label class="c-label c-label--light">
+            {{t status}}
+          </label>
+        </td>
+      </tr>
+
+    {{/each}}
+  </tbody>
+</table>
