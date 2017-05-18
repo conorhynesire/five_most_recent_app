@@ -1,0 +1,15 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          "last 2 versions",
+          "not ie < 11"
+        ]
+      }
+    }]
+  ],
+  "plugins": [
+    "transform-async-to-generator"    
+  ]
+}

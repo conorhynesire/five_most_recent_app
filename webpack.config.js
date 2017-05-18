@@ -18,7 +18,10 @@ var externalAssets = {
 module.exports = {
   progress: true,
   entry: {
-    app: ['./src/javascripts/index.js', './src/stylesheets/app.scss']
+    app: [
+      './src/javascripts/index.js',
+      './src/stylesheets/app.scss'
+    ]
   },
   output: {
     path: './dist/assets',
@@ -58,10 +61,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015']
-        }
+        loader: 'babel-loader'
       },
       {
         test: /\.(handlebars|hd?bs)$/,
