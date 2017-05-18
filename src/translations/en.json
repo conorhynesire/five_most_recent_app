@@ -1,19 +1,65 @@
 {
   "app": {
-    "description": "add your app description here",
-    "name": "add your app name here"
+    "description": {
+      "title": "App description",
+      "value": "Display the five most recent tickets the requester has submitted"
+    },
+    "name": {
+      "title": "App name",
+      "value": "Five most recent"
+    },
+    "package": "five_most_recent_app",
+    "parameters": {
+      "max_tickets_to_display": {
+        "label": {
+          "title": "Maximum number of recent Tickets to display",
+          "value": "Maximum number of recent Tickets to display."
+        },
+        "helpText": {
+          "title": "Help text for the maximum number of recent Tickets to display field",
+          "value": "Maximum number of recent Tickets to display (defaults to 5)."
+        }
+      }
+    }
   },
-
-  "hello": "Hello {{name}}!",
-
-  "save": {
-    "button": "Bookmark ticket #{{id}}",
-    "success": "Bookmarked ticket #{{id}}",
-    "error": "Sorry, something went wrong."
+  "global": {
+    "error": {
+      "title": {
+        "title": "Error message",
+        "value": "An error occurred"
+      },
+      "message": {
+        "title": "Error message",
+        "value": "Please try the previous action again."
+      },
+      "data": {
+        "title": "Error message",
+        "value": "Ticket data could not be read."
+      }
+    }
   },
-
-  "learn_more": {
-    "message": "To learn more, {{link}}",
-    "link_text": "see the Zendesk forums"
+  "new": {
+    "title": "New status",
+    "value": "New"
+  },
+  "hold": {
+    "title": "On Hold status",
+    "value": "On-hold"
+  },
+  "closed": {
+    "title": "Closed status",
+    "value": "Closed"
+  },
+  "solved": {
+    "title": "Solved status",
+    "value": "Solved"
+  },
+  "open": {
+    "title": "Open status",
+    "value": "Open"
+  },
+  "pending": {
+    "title": "Pending status",
+    "value": "Pending"
   }
 }
