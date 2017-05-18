@@ -18,6 +18,7 @@ class TicketSidebar {
     });
     
     this.view.switchTo('loading');
+    
     this.init();
   }
 
@@ -27,13 +28,20 @@ class TicketSidebar {
       url: `/api/v2/users/${getData['ticket.requester.id']}/tickets/requested.json?sort_order=desc`,
       dataType: 'json'
     });
-    const sortedTickets = _.chain(requestData.tickets)
-      .sortBy('id')
-      .take(this._metadata.settings.max_tickets_to_display)
-      .value();
+    const sortedTickets = this.sortTickets(
+      requestData.tickets,
+      this._metadata.settings.max_tickets_to_display
+    );
     this.view.switchTo('main', {
       latestTickets: sortedTickets
     });
+  }
+
+  sortTickets(tickets = [], maxTickets = 5) {
+    return _.chain(tickets)
+      .sortBy('id')
+      .take(maxTickets)
+      .value();
   }
 }
 

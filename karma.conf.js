@@ -11,6 +11,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: webpackConfig.externalAssets.js.concat([
+      'node_modules/babel-polyfill/dist/polyfill.js',
       'spec/helpers/**/*.js',
       'spec/**/*_spec.js'
     ]),
@@ -35,7 +36,8 @@ module.exports = function(config) {
       module: webpackConfig.module,
       resolveLoader: webpackConfig.resolveLoader,
       resolve: webpackConfig.resolve,
-      externals: webpackConfig.externals
+      externals: webpackConfig.externals,
+      plugins: webpackConfig.plugins
     },
 
     webpackServer: {
@@ -48,17 +50,13 @@ module.exports = function(config) {
       stats: 'errors-only'
     },
 
-    plugins: [
-      require("karma-webpack"),
-      require("karma-jasmine"),
-      require("karma-phantomjs-launcher"),
-      require("karma-chrome-launcher")
-    ],
-
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['dots'],
+    reporters: [
+      'dots',
+      'kjhtml'
+    ],
 
     // web server port
     port: 9876,
@@ -75,7 +73,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome_without_security'],
 
     customLaunchers: {
       // CRUFT: needed to load zaf_sdk with crossorigin=anonymous
