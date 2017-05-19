@@ -9,7 +9,7 @@
   "location": {
     "support": {
       "ticket_sidebar": "assets/index.html",
-      "talk_popup": "assets/index.html"
+      "talk_popover": "assets/index.html"
     }
   },
   "parameters": [

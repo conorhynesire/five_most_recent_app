@@ -1,47 +1,10 @@
-import View from 'view';
+import Common from './common';
 
-const MAX_HEIGHT = 375;
-
-class TicketSidebar {
+class TicketSidebar extends Common {
   constructor(client, data) {
-    this.client = client;
-    this._metadata = data.metadata;
-
-    this.view = new View({
-      afterRender: () => {
-        let newHeight = Math.min($('html').height(), MAX_HEIGHT);
-        this.client.invoke('resize', {
-          height: newHeight,
-          width: '100%'
-        });
-      }
-    });
-
-    this.view.switchTo('loading');
-
+    super(client, data);
+    this.path = 'ticket.requester.id';
     this.init();
-  }
-
-  async init() {
-    const getData = await this.client.get('ticket.requester.id');
-    const requestData = await this.client.request({
-      url: `/api/v2/users/${getData['ticket.requester.id']}/tickets/requested.json?sort_order=desc`,
-      dataType: 'json'
-    });
-    const sortedTickets = this.sortTickets(requestData.tickets);
-    this.view.switchTo('main', {
-      latestTickets: _.take(
-        sortedTickets,
-        this._metadata.settings.max_tickets_to_display
-      ) 
-    });
-  }
-
-  sortTickets(tickets = []) {
-    return _.chain(tickets)
-      .sortBy('id')
-      .value()
-      .reverse();
   }
 }
 

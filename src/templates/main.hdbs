@@ -2,7 +2,7 @@
   <tbody>
     {{#each latestTickets}}
       <tr class="_tooltip" data-title="{{description}}">
-        <td><a href="#/tickets/{{id}}"><b>#{{id}}</b> {{subject}}</a></td>
+        <td><a href="{{../domain}}/tickets/{{id}}" ticket_id="{{id}}" class="link_to_ticket"><b>#{{id}}</b> {{subject}}</a></td>
 
         <td class='status-cell'>
           <label class="c-label c-label--light">

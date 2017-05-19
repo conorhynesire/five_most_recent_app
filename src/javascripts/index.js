@@ -14,6 +14,6 @@ client.on('app.registered', function(appData) {
     let location = appData.context.location;
     let App = require(`./${location}.js`).default;
     // create a new instance of your app
-    new App(client, appData);
+    window.app = new App(client, appData);
   });
 });
